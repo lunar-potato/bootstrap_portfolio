@@ -22,3 +22,8 @@ startBtn.addEventListener('click', (e) => {
 document.addEventListener('click', () => {
     startMenu.classList.remove('active');
 });
+
+const desktop = document.getElementById('desktop');
+desktop.addEventListener('click', () => {
+    startMenu.classList.remove('active');
+});
