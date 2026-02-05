@@ -80,6 +80,8 @@ body, html {
     z-index: 1000;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 .system-tray {
