@@ -91,3 +91,9 @@ body, html {
     gap: 20px;
     font-size: 0.9rem;
 }
+
+#chromeIcon {
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin: 10px 10px;
+}
