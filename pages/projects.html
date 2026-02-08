@@ -1,38 +1,30 @@
+ <section id="projects">
+      <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-[#7dc4e4] md:mb-12">
+        My Projects
+      </h2>
+      <div className="flex flex-row items-center justify-center gap-2 py-6 text-[#8aadf4]">
+        
+      </div>
+      <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
+       
+      </ul>
+    </section>
 
-
-<div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content window-style">
-                <div class="modal-header">
-                    <h5 class="modal-title"><i class="bi bi-info-circle"></i> About Me</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Well Hello There</p>
-                </div>
-            </div>
+    <div>
+      <div
+        className="relative h-52 md:h-72 rounded-t-xl group"
+      >
+        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
+          <Link href='/' className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
+            <Code2 className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
+          </Link>
+          <Link href='/' className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
+            <Eye className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
+          </Link>
         </div>
-    </div>
-
-    <div class="modal fade" id="projectsModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content window-style">
-                <div class="modal-header">
-                    <h5 class="modal-title"><i class="bi bi-folder2-open"></i> File Explorer - Projects</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row text-center">
-                        <div class="col-4">
-                            <i class="bi bi-file-earmark-code fs-1"></i>
-                            <p>Project1/p>
-                        </div>
-                        <div class="col-4">
-                            <i class="bi bi-file-earmark-code fs-1"></i>
-                            <p>Project2</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div className="rounded-b-xl bg-[#1e2030] py-6 px-4">
+        <h5 className="mb-2 text-xl font-semibold text-[#7dc4e4]"></h5>
+        <p className="text-[#cad3f5]"></p>
+      </div>
     </div>
