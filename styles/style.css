@@ -84,15 +84,6 @@ body, html {
     flex-wrap: nowrap;
 }
 
-<<<<<<< HEAD
-#news:hover {
-    background: rgba(255, 255, 255, 0.55);
-}
-
-/* Navbar */
-.icon {
-    
-=======
 .system-tray {
     margin-left: auto;
     display: flex;
@@ -105,5 +96,4 @@ body, html {
     cursor: pointer;
     transition: opacity 0.2s;
     margin: 10px 10px;
->>>>>>> debeb60904db887067ae1ca3bb1175c38d812fe6
 }
