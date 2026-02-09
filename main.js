@@ -11,8 +11,16 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+function updateDate() {
+    const date = document.getElementById('date');
+    const now = new Date();
+    date.textContent = now.toLocaleDateString([], { day: '2-digit', month: '2-digit', year: '4-digit' });
+}
+setInterval(updateDate, 1000);
+updateDate();
+
 const startBtn = document.getElementById('startBtn');
-const startMenu = document.getElementById('startMenu');
+const startMenu = document.getElementsByClassName('startMenu');
 
 startBtn.addEventListener('click', (e) => {
     e.stopPropagation();
