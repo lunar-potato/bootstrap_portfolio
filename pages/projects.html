@@ -1,66 +1,116 @@
-<!DOCTYPE html>
-  
- <!doctype html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio OS</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/projects.css">
 </head>
 
 <body>
-  <section id="projects">
-       <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-[#7dc4e4] md:mb-12">
-         My Projects
-       </h2>
-       <div className="flex flex-row items-center justify-center gap-2 py-6 text-[#8aadf4]">
-         
-       </div>
-       <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
-        
-       </ul>
-     </section>
-  
-     <div>
-       <div
-         className="relative h-52 md:h-72 rounded-t-xl group"
-       >
-         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-           <Link href='/' className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
-             <Code2 className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-           </Link>
-           <Link href='/' className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
-             <Eye className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-           </Link>
-         </div>
-       </div>
-       <div className="rounded-b-xl bg-[#1e2030] py-6 px-4">
-         <h5 className="mb-2 text-xl font-semibold text-[#7dc4e4]"></h5>
-         <p className="text-[#cad3f5]"></p>
-       </div>
-     </div>
+  <div class="container py-5">
+    
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+      <div class="mb-3 mb-md-0">
+        <h2 class="fw-bold mb-1">My Projects</h2>
+        <p class="text-muted mb-0">Check out what I've been working on recently.</p>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-secondary active">All Projects</button>
+        <button type="button" class="btn btn-outline-secondary">Recent Projects</button>
+      </div>
+    </div>
 
-  <!-- For Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-    crossorigin="anonymous"></script>
-  <script src="./projects.js"></script>
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card h-100 project-card rounded-4 border-0 shadow-sm">
+          <div class="card-img-wrapper">
+            <img src="https://placehold.co/600x400/2563eb/ffffff?text=Bootstrap+Website" class="card-img-top" alt="Project 1">
+            <div class="position-absolute top-0 end-0 p-3">
+              <span class="tech-badge shadow-sm text-primary">BOOTSTRAP</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <h5 class="card-title fw-bold">Bootstrap Website</h5>
+            <p class="card-text text-muted small flex-grow-1">Bootstrap Portfolio for DG1IAD</p>
+            <div class="d-flex gap-2 mt-4">
+              <a href="#" class="btn btn-custom-primary btn-sm flex-fill rounded-3 py-2 fw-semibold">Live Demo</a>
+              <a href="https://github.com/lunar-potato/bootstrap_portfolio" class="btn btn-custom-secondary btn-sm flex-fill rounded-3 py-2 fw-semibold"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 project-card rounded-4 border-0 shadow-sm">
+          <div class="card-img-wrapper">
+            <img src="https://placehold.co/600x400/10b981/ffffff?text=Charity+Foundation+Website" class="card-img-top" alt="Project 2">
+            <div class="position-absolute top-0 end-0 p-3">
+              <span class="tech-badge shadow-sm text-success">NEXT.JS</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <h5 class="card-title fw-bold">Charity Foundation Website</h5>
+            <p class="card-text text-muted small flex-grow-1">A responsive website for a charity foundation built with NextJS.</p>
+            <div class="d-flex gap-2 mt-4">
+              <a href="#" class="btn btn-custom-primary btn-sm flex-fill rounded-3 py-2 fw-semibold">Live Demo</a>
+              <a href="https://github.com/lunar-potato/wecare4u" class="btn btn-custom-secondary btn-sm flex-fill rounded-3 py-2 fw-semibold"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 project-card rounded-4 border-0 shadow-sm">
+          <div class="card-img-wrapper">
+            <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Portfolio+Website" class="card-img-top" alt="Project 3">
+            <div class="position-absolute top-0 end-0 p-3">
+              <span class="tech-badge shadow-sm text-info">NEXT.JS</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <h5 class="card-title fw-bold">Portfolio Website</h5>
+            <p class="card-text text-muted small flex-grow-1">A responsive portfolio website built with NextJS and TailwindCSS, showcasing projects and skills.</p>
+            <div class="d-flex gap-2 mt-4">
+              <a href="https://sukiluna.me" class="btn btn-custom-primary btn-sm flex-fill rounded-3 py-2 fw-semibold">Live Demo</a>
+              <a href="https://github.com/lunar-potato/react-portfolio" class="btn btn-custom-secondary btn-sm flex-fill rounded-3 py-2 fw-semibold"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 project-card rounded-4 border-0 shadow-sm">
+          <div class="card-img-wrapper">
+            <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Web+Dev+Quiz" class="card-img-top" alt="Project 4">
+            <div class="position-absolute top-0 end-0 p-3">
+              <span class="tech-badge shadow-sm text-warning">JS</span>
+            </div>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <h5 class="card-title fw-bold">Web Dev Quiz</h5>
+            <p class="card-text text-muted small flex-grow-1">An interactive coding quiz challenge filled with topics about HTML, CSS, and JavaScript.</p>
+            <div class="d-flex gap-2 mt-4">
+              <a href="https://lunar-potato.github.io/coding-quiz/" class="btn btn-custom-primary btn-sm flex-fill rounded-3 py-2 fw-semibold">Live Demo</a>
+              <a href="https://github.com/lunar-potato/coding-quiz" class="btn btn-custom-secondary btn-sm flex-fill rounded-3 py-2 fw-semibold"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-5 pt-4 border-top text-center">
+      <p class="text-muted small">More projects available on my GitHub profile.</p>
+      <a href="https://github.com/lunar-potato" target="_blank" class="btn btn-outline-dark rounded-pill px-4 text-sm fw-bold">Visit GitHub Profile</a>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
- 
