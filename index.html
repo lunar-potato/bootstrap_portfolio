@@ -18,18 +18,19 @@
 <body>
   <header id="mainHeader">
     <nav class="taskbar">
-      <div class="start-menu-btn" id="startBtn">
+      <div class="start-menu" id="startMenu">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-fill"
           viewBox="0 0 16 16">
           <path
             d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z" />
-        </svg> Start
+        </svg> 
       </div>
       <div class="taskbar-divider"></div>
       <div class="taskbar-items">
       </div>
       <div class="system-tray">
         <span id="clock">12:00 PM</span>
+        <span id="date">12/12/2026</span>
       </div>
     </nav>
   </header>
@@ -37,35 +38,51 @@
 
   <main>
     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#1a1a1a" class="bi bi-browser-chrome"
-      id="chromeIcon" viewBox="0 0 16 16">
+      id="chromeIcon" viewBox="0 0 16 16" onclick="openChrome()">
       <path fill-rule="evenodd"
         d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
     </svg>
 
-    <!-- practice comment jsut for fun haha -->
+    <div id="chrome-modal" class="chrome-window" style="display: none;">
+  
+  <div class="chrome-header">
+    <div class="tab-container">
+      <div class="chrome-tab active" onclick="switchTab('about')">
+        <span class="tab-title">About Me</span>
+        <span class="tab-close">×</span>
+      </div>
+      <div class="chrome-tab" onclick="switchTab('projects')">
+        <span class="tab-title">Projects</span>
+        <span class="tab-close">×</span>
+      </div>
+      <div class="chrome-tab" onclick="switchTab('contact')">
+        <span class="tab-title">Contact</span>
+        <span class="tab-close">×</span>
+      </div>
+    </div>
     
-    <!-- <section class="desktop">
-      <div class="icon" onclick="openModal('aboutModal')">
-        <i class="bi bi-person-vcard"></i>
-        <span>About Me</span>
-      </div>
-      <div class="icon" onclick="openModal('projectsModal')">
-        <i class="bi bi-folder-fill"></i>
-        <span>Projects</span>
-      </div>
-      <div class="icon" onclick="openModal('contactModal')">
-        <i class="bi bi-envelope-fill"></i>
-        <span>Contact</span>
-      </div>
-    </section> -->
+    <div class="window-controls">
+      <span class="win-btn minimize">–</span>
+      <span class="win-btn close" onclick="closeChrome()">×</span>
+    </div>
+  </div>
+
+  <div class="chrome-sub-header">
+    <div class="nav-arrow">←</div>
+    <div class="nav-arrow">→</div>
+    <div class="nav-refresh">↻</div>
+    <input type="text" id="address-bar" value="localhost:3000/about-me" readonly>
+  </div>
+
+  <div class="chrome-body">
+    <iframe id="tab-about" src="./pages/about.html" class="tab-content active"></iframe>
+    <iframe id="tab-projects" src="./pages/projects.html" class="tab-content"></iframe>
+    <iframe id="tab-contact" src="./pages/contact.html" class="tab-content"></iframe>
+  </div>
+</div>
 
   </main>
 
-  <!-- <div class="start-menu" id="startMenu">
-    <div class="start-header">Welcome, User</div>
-    <div class="start-item"><i class="bi bi-gear"></i> Settings</div>
-    <div class="start-item" onclick="location.reload()"><i class="bi bi-power"></i> Restart</div>
-  </div> -->
 
   <div id="news" class="box">
     <h2>Currently studying in University</h2>
