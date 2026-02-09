@@ -3,21 +3,20 @@ function openModal(id) {
     myModal.show();
 }
 
-function updateClock() {
+function updateTimeAndDate() {
+    const now = new Date();
     const clock = document.getElementById('clock');
-    const now = new Date();
-    clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-setInterval(updateClock, 1000);
-updateClock();
+    if (clock) {
+        clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });   
+    }
 
-function updateDate() {
     const date = document.getElementById('date');
-    const now = new Date();
-    date.textContent = now.toLocaleDateString([], { day: '2-digit', month: '2-digit', year: '4-digit' });
+    if (date) {
+        date.textContent = now.toLocaleDateString([], { day: '2-digit', month: '2-digit', year: 'numeric' });
+    }
 }
-setInterval(updateDate, 1000);
-updateDate();
+updateTimeAndDate();
+setInterval(updateTimeAndDate, 1000);
 
 const startBtn = document.getElementById('startBtn');
 const startMenu = document.getElementsByClassName('startMenu');
