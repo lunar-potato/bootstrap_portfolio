@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<header>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1
-.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/contact.css">
-</header>
+</head>
 
 <body>
     <div class="container py-5 contact-me">
@@ -16,31 +16,50 @@
             <div class="col-md-8 col-lg-6">
 
                 <h2 class="fw-bold text-dark mb-2">Get in touch</h2>
-                <p class="text-muted mb-4 small">Send a message to my inbox!</p>
+                <p class="text-muted mb-4 small">I'm open to discussing new projects!</p>
 
-                <form action="https://formspree.io/f/mqedalpe" method="POST">
+                <form id="contactForm" novalidate>
 
                     <div class="mb-3">
                         <label class="form-label text-secondary small fw-bold text-uppercase">Name</label>
-                        <input type="text" name="name" class="form-control bg-light border-light-subtle shadow-sm"
+                        <input type="text" id="name" class="form-control bg-light border-light-subtle shadow-sm"
                             placeholder="Weir Doe" required>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label text-secondary small fw-bold text-uppercase">Email</label>
-                        <input type="email" name="email" class="form-control bg-light border-light-subtle shadow-sm"
+                        <input type="email" id="email" class="form-control bg-light border-light-subtle shadow-sm"
                             placeholder="weirdoe@example.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small fw-bold text-uppercase">Confirm Email</label>
+                        <input type="email" id="confirmEmail" class="form-control bg-light border-light-subtle shadow-sm"
+                            placeholder="Confirm your email" required>
+                        <div id="emailError" class="invalid-feedback">Emails must match.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small fw-bold text-uppercase">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control bg-light border-light-subtle shadow-sm"
+                            placeholder="07123456789" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-secondary small fw-bold text-uppercase">Preferred Date</label>
+                        <input type="date" id="date" class="form-control bg-light border-light-subtle shadow-sm" required>
+                        <div id="dateError" class="invalid-feedback">Date must be at least 1 day in the future.</div>
                     </div>
 
                     <div class="mb-4">
                         <label class="form-label text-secondary small fw-bold text-uppercase">Message</label>
-                        <textarea name="message" class="form-control bg-light border-light-subtle shadow-sm" rows="4"
+                        <textarea id="message" class="form-control bg-light border-light-subtle shadow-sm" rows="4"
                             placeholder="Send me a message!" required></textarea>
                     </div>
 
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary fw-bold py-2 shadow-sm">
-                            Send Message
+                            Verify & Send
                         </button>
                     </div>
 
@@ -49,6 +68,35 @@
             </div>
         </div>
     </div>
-</body>
 
+    <div class="modal fade" id="summaryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Submission</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please review your details before confirming.</p>
+                    <hr>
+                    <p><strong>To:</strong> <span class="text-primary">230089967@aston.ac.uk</span></p>
+                    <hr>
+                    <p><strong>Name:</strong> <span id="summaryName"></span></p>
+                    <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+                    <p><strong>Phone:</strong> <span id="summaryPhone"></span></p>
+                    <p><strong>Date:</strong> <span id="summaryDate"></span></p>
+                    <p><strong>Message:</strong> <span id="summaryMessage"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                    <button type="button" class="btn btn-success" onclick="alert('Form validated! (No email actually sent)')">Confirm & Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="contact.js"></script>
+</body>
 </html>
